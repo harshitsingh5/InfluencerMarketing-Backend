@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>xyz | Paytm</title>
+</head>
+<body>
+<form method="post" action="https://pguat.paytm.com/oltp-web/processTransaction" name="f1">
+	{% for key in param_dict %}
+	<input type="hidden" name="{{key.strip()}}" value="{{param_dict[key].strip()}}">
+	{% endfor %}
+<script type="text/javascript">
+	document.f1.submit();
+</script>
+</form>
+</body>
+</html>
